@@ -43,7 +43,7 @@ for i in range(100):
     while (win == False):
         randomnum1 = randint(0,8)
         if (" " in ringtable[randomnum1]):
-        #checking if there's empty space in the selected "ringholder"
+        #checking if there is empty space in the selected "ringholder"
 
             randomnum2 = randint(0,2)
             if (rings[randomnum2] not in ringtable[randomnum1]):
