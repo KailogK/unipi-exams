@@ -1,7 +1,7 @@
 import json
 
 dictionaries = []
-with open("task7.txt","r") as f: # | reading from a
+with open("task7.txt","r") as f: # | reading from a txt
     data = f.read()              # | file (task7.txt)
 
 dictionaries = data.split("\n")               # \
