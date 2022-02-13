@@ -29,7 +29,6 @@ for round in range(int(data["round"])-1, int(data["round"])-20, -1): #range: lat
     counter += 1
     print (counter, "", data["randomness"])
 
-#print (numbers) #TESTING PURPOSES
 #calculating probability and entropy for each character
 percentage = 0.0
 ent = 0
