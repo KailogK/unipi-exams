@@ -14,7 +14,7 @@ while (option != "1" and option != "2"):
 if (option == "2"):
     print ()
     print ("By default consecutive 0's and 1's would be marked red. \n But depending how you run the program, it could show you something such as '←[1;31m' and '←[0m'")
-    print ("If you want a different way of finding 0's and 1's, type something like '|||||'. \n if you want to keep default just press enter.")
+    print ("If you want a different way of finding 0's and 1's, type something like '|||||'. \n If you want to keep default just press enter.")
     option2=str(input("Option: "))
 
     if (option2 == ""):
@@ -98,7 +98,7 @@ if (option == "2"):                                        # \
     print ("all of 100 numbers in hex:", numbersHEX)
     print ()
     print ("in binary:", newnumbers)
-    print ("Note: if you went with the default option for marking and didn't see any red, \n make sure to give something such as '|||||'")
+    print ("Note: if you went with the default option for marking and didn't see any red, \n make sure to try with something such as '|||||'")
     print ()
 
 print ("counted:", max0count, "consecutive 0's   |  ", max1count, "consecutive 1's")
