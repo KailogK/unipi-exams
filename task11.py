@@ -3,8 +3,8 @@ from math import log
 import json
 
 print ()
-print ("Description: getting 20 latest numbers from: 'https://drand.cloudflare.com/public/latest'")
-print ("For each number (hex) we count every character and calculate the entropy;")
+print ("Description: getting 20 latest numbers from: 'https://drand.cloudflare.com/public/latest';")
+print ("For each number (hex) we count every character and calculate the entropy.")
 x=str(input("Type anything to continue: "))
 print ()
 print ("Getting numbers...")
@@ -34,17 +34,17 @@ percentage = 0.0
 ent = 0
 print ()
 print ("===== RESULTS =====")
-for i in range(16):                                  # \
-    sum=0                                            #  \
-    for number in numbers:                           #   \
-        if (number==hex(i)[2:]):                     #    \
-            sum+=1                                   #     | counting appereances for every
-    percentage=sum/len(numbers)*100                  #     | number and calculating its
-    print ()                                         #     | probability of appearing and entropy
-    print ("for the char '",hex(i)[2:],"' we have:") #    /
-    print ("counted in total:",sum)                  #   /
-    print ("probability:",percentage,"%")            #  /
-    ent += -percentage*log(percentage)               # /
+for i in range(16):                                          # \
+    sum=0                                                    #  \
+    for number in numbers:                                   #   \
+        if (number==hex(i)[2:]):                             #    \
+            sum+=1                                           #     | counting appereances for every
+    percentage=sum/len(numbers)                              #     | number and calculating its
+    print ()                                                 #     | probability of appearing and entropy
+    print ("for the char '",hex(i)[2:],"' we have:")         #    /
+    print ("counted in total:",sum)                          #   /
+    print ("frequency:",percentage,"(",percentage*100,"% )") #  /
+    ent += -percentage*log(percentage,2)                     # /
 
 print ()
 print ("entropy:", ent)
