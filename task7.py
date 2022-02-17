@@ -1,7 +1,7 @@
 import json
 
 dictionaries = []
-with open("task7.txt","r") as f: # | reading from a txt
+with open("task7.txt","r") as f: # | reading from a
     data = f.read()              # | file (task7.txt)
 
 dictionaries = data.split("\n")               # \
@@ -51,7 +51,10 @@ while (key != "KILL"):
         print ("smallest value:", mintmp)
         print ("type:", str(type(mintmp))[8:-2])
         print ()
-        print ("most popular value:", popular)
-        print ("type:", str(type(popular))[8:-2])
+        if (popularcounter <= 1):
+            print ("most popular value: none")
+        else:
+            print ("most popular value:", popular)
+            print ("type:", str(type(popular))[8:-2])
         print ()
         key=str(input("Give a key: "))
